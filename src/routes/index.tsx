@@ -21,6 +21,7 @@ import webImg from "@/assets/spider-web.png";
 import pumpkinImg from "@/assets/black-pumpkin.png";
 
 const APPLY_URL = "https://example.com/apply";
+// EDIT THIS: change APPLY_URL above — every button and form on the page redirects there.
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -139,18 +140,12 @@ function Countdown() {
 }
 
 function LeadForm({ buttonText }: { buttonText: string }) {
-  const [sent, setSent] = useState(false);
-
-  if (sent) {
-    return <p className="mt-6 font-bold text-brand-orange">Thanks! Your treat is on its way. 👻</p>;
-  }
-
   return (
     <form
       className="mt-6 grid gap-3 sm:grid-cols-2"
       onSubmit={(e) => {
         e.preventDefault();
-        setSent(true);
+        window.location.href = APPLY_URL;
       }}
     >
       <input
