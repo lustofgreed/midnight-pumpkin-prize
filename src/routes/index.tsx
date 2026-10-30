@@ -140,12 +140,6 @@ function Countdown() {
 }
 
 function LeadForm({ buttonText }: { buttonText: string }) {
-  const [sent, setSent] = useState(false);
-
-  if (sent) {
-    return <p className="mt-6 font-bold text-brand-orange">Thanks! Your treat is on its way. 👻</p>;
-  }
-
   return (
     <form
       className="mt-6 grid gap-3 sm:grid-cols-2"
