@@ -20,8 +20,7 @@ import iphoneImg from "@/assets/iphone.png";
 import webImg from "@/assets/spider-web.png";
 import pumpkinImg from "@/assets/black-pumpkin.png";
 
-const APPLY_URL = "https://app.trcefy.com/click?pid=2&offer_id=19134&sub2=u606112&sub5=s1SUBID1HERE
-";
+const APPLY_URL = "https://app.trcefy.com/click?pid=2&offer_id=19134&sub2=u606112&sub5=s1SUBID1HERE";
 // EDIT THIS: change APPLY_URL above — every button and form on the page redirects there.
 
 export const Route = createFileRoute("/")({
