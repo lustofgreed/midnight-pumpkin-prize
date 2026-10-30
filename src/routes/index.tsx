@@ -26,16 +26,16 @@ const APPLY_URL = "https://app.trcefy.com/click?pid=2&offer_id=19134&sub2=u60611
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Spooky — Halloween Deal 🎃" },
+      { title: "Spooky — Halloween-Angebot 🎃" },
       {
         name: "description",
         content:
-          "Boo! Ghost your phone bill and score a spooky deal. Free phone package and free monthly service through the federal Lifeline program.",
+          "Buh! Sag deiner Handyrechnung Tschüss und sichere dir einen gruseligen Deal. Kostenloses Handypaket und kostenloser Monatstarif.",
       },
-      { property: "og:title", content: "Spooky — Halloween Deal 🎃" },
+      { property: "og:title", content: "Spooky — Halloween-Angebot 🎃" },
       {
         property: "og:description",
-        content: "Claim your free phone package and free monthly service before this treat vanishes!",
+        content: "Sichere dir dein kostenloses Handypaket und deinen kostenlosen Monatstarif, bevor das Angebot verschwindet!",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -45,36 +45,36 @@ export const Route = createFileRoute("/")({
 });
 
 const steps = [
-  { icon: MapPin, label: "1. Enter ZIP Code" },
-  { icon: Smartphone, label: "2. Choose your plan & phone" },
-  { icon: ClipboardCheck, label: "3. Check eligibility" },
-  { icon: BadgeCheck, label: "4. Get Approved" },
+  { icon: MapPin, label: "1. Postleitzahl eingeben" },
+  { icon: Smartphone, label: "2. Tarif & Handy wählen" },
+  { icon: ClipboardCheck, label: "3. Berechtigung prüfen" },
+  { icon: BadgeCheck, label: "4. Bestätigung erhalten" },
 ];
 
 const programs = [
-  { icon: ShoppingBasket, label: "SNAP / Food Stamps" },
+  { icon: ShoppingBasket, label: "SNAP / Lebensmittelhilfe" },
   { icon: Landmark, label: "SSI" },
-  { icon: Apple, label: "California WIC" },
+  { icon: Apple, label: "Kalifornien WIC" },
   { icon: HeartPulse, label: "Medicaid / Medi-Cal" },
-  { icon: Medal, label: "Veterans Pension" },
-  { icon: Building2, label: "Public Housing (HUD)" },
+  { icon: Medal, label: "Veteranenrente" },
+  { icon: Building2, label: "Sozialer Wohnungsbau (HUD)" },
   { icon: Tent, label: "Tribal TANF" },
 ];
 
-const stateTabs = ["California", "Kentucky", "Tribal Residents", "Other States"];
+const stateTabs = ["Kalifornien", "Kentucky", "Stammesgebiete", "Andere Staaten"];
 
 function Logo() {
   return (
     <a href="/" className="leading-none">
       <span className="block font-display text-3xl text-brand-orange">Spooky</span>
       <span className="block text-[10px] font-medium tracking-widest text-muted-foreground">
-        HALLOWEEN GIVEAWAY
+        HALLOWEEN-GEWINNSPIEL
       </span>
     </a>
   );
 }
 
-function ApplyButton({ children = "Apply Now" }: { children?: React.ReactNode }) {
+function ApplyButton({ children = "Jetzt beantragen" }: { children?: React.ReactNode }) {
   return (
     <a
       href={APPLY_URL}
@@ -130,11 +130,11 @@ function Countdown() {
 
   return (
     <div className="flex items-start justify-center gap-4">
-      {cell(left?.h, "Hours")}
+      {cell(left?.h, "Std")}
       <span className="pt-4 text-2xl text-muted-foreground">:</span>
-      {cell(left?.m, "Mins")}
+      {cell(left?.m, "Min")}
       <span className="pt-4 text-2xl text-muted-foreground">:</span>
-      {cell(left?.s, "Secs")}
+      {cell(left?.s, "Sek")}
     </div>
   );
 }
@@ -150,13 +150,13 @@ function LeadForm({ buttonText }: { buttonText: string }) {
     >
       <input
         required
-        placeholder="Enter Zip Code"
+        placeholder="Postleitzahl eingeben"
         className="rounded-lg border border-input bg-muted px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
       />
       <input
         required
         type="email"
-        placeholder="Enter Your Email Address"
+        placeholder="E-Mail-Adresse eingeben"
         className="rounded-lg border border-input bg-muted px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
       />
       <button
@@ -172,8 +172,9 @@ function LeadForm({ buttonText }: { buttonText: string }) {
 function PrivacyNote() {
   return (
     <p className="mt-4 text-xs text-muted-foreground">
-      By continuing, you agree to our <span className="underline">Privacy Policy</span> and to receive emails
-      about the latest updates, offers and notifications from Spooky. You can unsubscribe at any time.
+      Mit dem Fortfahren stimmst du unserer <span className="underline">Datenschutzerklärung</span> zu und
+      erklärst dich damit einverstanden, E-Mails mit aktuellen Neuigkeiten, Angeboten und Hinweisen von
+      Spooky zu erhalten. Du kannst dich jederzeit abmelden.
     </p>
   );
 }
@@ -202,38 +203,38 @@ function Index() {
         />
         <img
           src={pumpkinImg}
-          alt="Jack-o-lantern"
+          alt="Kürbislaterne"
           width={816}
           height={816}
           className="absolute bottom-0 left-2 w-20 md:left-10 md:w-32"
         />
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-5 pb-12 pt-8 text-center">
           <div className="flex items-center justify-center gap-2">
-            <img src={ghostImg} alt="Ghost mascot" width={816} height={816} className="w-10 md:w-12" />
+            <img src={ghostImg} alt="Geister-Maskottchen" width={816} height={816} className="w-10 md:w-12" />
             <h1 className="font-display text-3xl leading-tight text-foreground drop-shadow md:text-4xl">
-              Boo! Ghost your phone bill,
+              Buh! Sag deiner Handyrechnung Tschüss,
               <br />
-              Score a spooky deal
+              sichere dir einen gruseligen Deal
             </h1>
           </div>
           <div className="relative mt-4 w-full max-w-md">
             <img
               src={phonePackageImg}
-              alt="Free phone package with two smartphones, SIM cards and charger"
+              alt="Kostenloses Handypaket mit zwei Smartphones, SIM-Karten und Ladegerät"
               width={1024}
               height={1024}
               className="mx-auto w-64 md:w-80"
             />
             <span className="absolute left-0 top-1/3 -rotate-3 rounded-md border-2 border-foreground bg-panel px-2 py-1 font-display text-sm text-foreground md:-left-16 md:text-lg">
-              FREE PHONE PACKAGE
+              KOSTENLOSES HANDYPAKET
             </span>
             <span className="absolute right-0 top-6 rotate-3 rounded-md border-2 border-foreground bg-panel px-2 py-1 font-display text-sm text-foreground md:-right-16 md:text-lg">
-              FREE MONTHLY SERVICE
+              KOSTENLOSER MONATSTARIF
             </span>
           </div>
           <div className="mt-4 w-full rounded-xl border border-brand-orange/60 bg-panel/90 p-4 backdrop-blur">
             <h2 className="text-sm font-bold text-brand-orange md:text-base">
-              Enter your details and unlock your spooky-good deal.
+              Gib deine Daten ein und schalte deinen gruselig guten Deal frei.
             </h2>
             <form
               className="mt-3 grid gap-2 sm:grid-cols-3"
@@ -244,25 +245,26 @@ function Index() {
             >
               <input
                 required
-                placeholder="Enter Zip Code"
+                placeholder="Postleitzahl eingeben"
                 className="rounded-md border border-input bg-muted px-3 py-2 text-xs placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <input
                 required
                 type="email"
-                placeholder="email@address.com"
+                placeholder="email@adresse.de"
                 className="rounded-md border border-input bg-muted px-3 py-2 text-xs placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <button
                 type="submit"
                 className="rounded-md bg-brand-orange py-2 text-xs font-bold uppercase text-primary-foreground hover:opacity-90"
               >
-                Unlock My Offer
+                Angebot freischalten
               </button>
             </form>
             <p className="mt-2 text-[10px] text-muted-foreground">
-              By continuing, you agree to our <span className="underline">Privacy Policy</span> and to receive
-              emails about the latest updates, offers and notifications from Spooky. You can unsubscribe at any time.
+              Mit dem Fortfahren stimmst du unserer <span className="underline">Datenschutzerklärung</span> zu und
+              erklärst dich damit einverstanden, E-Mails mit aktuellen Neuigkeiten, Angeboten und Hinweisen von
+              Spooky zu erhalten. Du kannst dich jederzeit abmelden.
             </p>
           </div>
         </div>
@@ -273,18 +275,18 @@ function Index() {
         <div className="mx-auto max-w-2xl text-center">
           <div className="flex items-center justify-center gap-3">
             <h2 className="font-display text-5xl text-brand-orange md:text-6xl">
-              Don't let this treat vanish!
+              Lass dir diese Überraschung nicht entgehen!
             </h2>
-            <img src={ghostImg} alt="Ghost mascot" width={816} height={816} loading="lazy" className="w-14 md:w-16" />
+            <img src={ghostImg} alt="Geister-Maskottchen" width={816} height={816} loading="lazy" className="w-14 md:w-16" />
           </div>
           <div className="mt-8">
             <Countdown />
           </div>
           <div className="relative mt-4 rounded-t-2xl bg-panel px-6 pb-2 pt-8 text-card-foreground">
             <p className="text-sm text-foreground/90">
-              Quick! Boo can't keep these scary-good phone offers around forever
+              Schnell! Buh kann diese gruselig guten Handyangebote nicht ewig aufbewahren
             </p>
-            <LeadForm buttonText="Claim My Treat" />
+            <LeadForm buttonText="Überraschung sichern" />
             <PrivacyNote />
           </div>
           <DripEdge className="text-panel" />
@@ -304,11 +306,11 @@ function Index() {
         <div className="relative mx-auto max-w-5xl text-center">
           <div className="flex items-center justify-center gap-4">
             <h2 className="font-display text-5xl uppercase text-brand-orange md:text-7xl">
-              Claiming your treat
+              Deine Überraschung
               <br />
-              is scarily easy
+              ist gruselig einfach
             </h2>
-            <img src={ghostImg} alt="Ghost mascot" width={816} height={816} loading="lazy" className="hidden w-20 sm:block" />
+            <img src={ghostImg} alt="Geister-Maskottchen" width={816} height={816} loading="lazy" className="hidden w-20 sm:block" />
           </div>
           <div className="mt-16 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {steps.map((s) => (
@@ -321,7 +323,7 @@ function Index() {
             ))}
           </div>
           <div className="mt-12">
-            <ApplyButton>Ready, Set, Boo!</ApplyButton>
+            <ApplyButton>Auf die Plätze, fertig, Buh!</ApplyButton>
           </div>
         </div>
       </section>
@@ -337,10 +339,10 @@ function Index() {
           className="pointer-events-none absolute -left-24 -top-24 w-72 opacity-30"
         />
         <div className="relative mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-5xl text-brand-orange md:text-6xl">Who can claim this treat?</h2>
+          <h2 className="font-display text-5xl text-brand-orange md:text-6xl">Wer kann sich diese Überraschung sichern?</h2>
           <p className="mt-4 text-foreground/90">
-            Boo might have this treat for you if you receive benefits from one of these programs or meet the
-            income requirement.
+            Buh hat vielleicht eine Überraschung für dich, wenn du Leistungen aus einem dieser Programme
+            erhältst oder die Einkommensvoraussetzung erfüllst.
           </p>
           <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
             {programs.map((p) => (
@@ -354,11 +356,11 @@ function Index() {
             ))}
           </div>
           <div className="mt-10">
-            <ApplyButton>Check My Eligibility</ApplyButton>
+            <ApplyButton>Berechtigung prüfen</ApplyButton>
           </div>
           <p className="mt-8 text-xs text-muted-foreground">
-            Offer provided through the federal Lifeline program via Spooky. Eligibility, service, and
-            device availability vary by state.
+            Angebot über das staatliche Lifeline-Programm von Spooky. Berechtigung, Leistungen und
+            Geräteverfügbarkeit unterscheiden sich je nach Bundesstaat.
           </p>
         </div>
       </section>
@@ -375,13 +377,13 @@ function Index() {
         />
         <div className="relative mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3">
-            <img src={ghostImg} alt="Ghost mascot" width={816} height={816} loading="lazy" className="w-14 md:w-16" />
+            <img src={ghostImg} alt="Geister-Maskottchen" width={816} height={816} loading="lazy" className="w-14 md:w-16" />
             <h2 className="font-display text-5xl text-brand-orange md:text-6xl">
-              Knock, knock...your treat is inside
+              Klopf, klopf...deine Überraschung wartet drinnen
             </h2>
           </div>
           <p className="mt-3 text-sm text-foreground/80">
-            Pick where you live and uncover the scary-good FREE deal waiting in your area
+            Wähle deinen Wohnort und entdecke das gruselig gute KOSTENLOSE Angebot in deiner Region
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-2">
@@ -415,20 +417,20 @@ function Index() {
               </div>
               <span className="text-4xl font-bold">+</span>
               <div className="rounded-xl border border-primary-foreground/40 p-6">
-                <p className="font-display text-5xl">12GB/mo</p>
-                <p className="mt-1 text-sm font-medium">Free Monthly Service</p>
+                <p className="font-display text-5xl">12 GB/Monat</p>
+                <p className="mt-1 text-sm font-medium">Kostenloser Monatstarif</p>
               </div>
             </div>
             <a
               href={APPLY_URL}
               className="mt-8 inline-block w-full max-w-md rounded-lg bg-panel py-3 text-sm font-bold uppercase text-foreground transition-opacity hover:opacity-90"
             >
-              Get This $0 Treat
+              Diese 0-€-Überraschung sichern
             </a>
           </div>
           <DripEdge className="text-brand-orange" />
           <p className="mt-6 text-sm font-medium">
-            Phone models vary by inventory. The best treats go fast, so claim yours early!
+            Handymodelle variieren je nach Bestand. Die besten Überraschungen sind schnell weg, also sichere dir deine früh!
           </p>
         </div>
       </section>
@@ -437,7 +439,7 @@ function Index() {
       <footer className="relative border-t border-border bg-panel px-5 py-10">
         <img
           src={pumpkinImg}
-          alt="Black jack-o-lantern"
+          alt="Schwarze Kürbislaterne"
           width={816}
           height={816}
           loading="lazy"
@@ -448,7 +450,7 @@ function Index() {
           <nav className="flex gap-6 font-medium">
             <a href="https://instagram.com" className="hover:text-brand-orange">Instagram</a>
             <a href="https://pinterest.com" className="hover:text-brand-orange">Pinterest</a>
-            <a href="mailto:hello@example.com" className="hover:text-brand-orange">Email</a>
+            <a href="mailto:hello@example.com" className="hover:text-brand-orange">E-Mail</a>
           </nav>
           <p className="text-sm text-foreground/70">© 2026 Spooky</p>
         </div>
