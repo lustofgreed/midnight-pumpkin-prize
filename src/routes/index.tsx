@@ -54,14 +54,14 @@ const steps = [
 const programs = [
   { icon: ShoppingBasket, label: "SNAP / Lebensmittelhilfe" },
   { icon: Landmark, label: "SSI" },
-  { icon: Apple, label: "Kalifornien WIC" },
+  { icon: Apple, label: "Wohngeld" },
   { icon: HeartPulse, label: "Medicaid / Medi-Cal" },
   { icon: Medal, label: "Veteranenrente" },
   { icon: Building2, label: "Sozialer Wohnungsbau (HUD)" },
   { icon: Tent, label: "Tribal TANF" },
 ];
 
-const stateTabs = ["Kalifornien", "Kentucky", "Stammesgebiete", "Andere Staaten"];
+const stateTabs = ["Bayern", "Berlin", "Nordrhein-Westfalen", "Andere Bundesländer"];
 
 function Logo() {
   return (
@@ -359,8 +359,7 @@ function Index() {
             <ApplyButton>Berechtigung prüfen</ApplyButton>
           </div>
           <p className="mt-8 text-xs text-muted-foreground">
-            Angebot über das staatliche Lifeline-Programm von Spooky. Berechtigung, Leistungen und
-            Geräteverfügbarkeit unterscheiden sich je nach Bundesstaat.
+            Berechtigung, Leistungen und Geräteverfügbarkeit können je nach Bundesland unterschiedlich sein.
           </p>
         </div>
       </section>
