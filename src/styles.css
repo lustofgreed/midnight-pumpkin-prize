@@ -51,9 +51,11 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --font-display: "Creepster", cursive;
+  --font-display: "Jolly Lodger", cursive;
   --font-sans: "Barlow", system-ui, sans-serif;
   --color-brand-purple: var(--brand-purple);
+  --color-brand-orange: var(--brand-orange);
+  --color-navy: var(--navy);
   --color-panel: var(--panel);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -87,9 +89,11 @@
   --input: oklch(0.4 0.03 260);
   --ring: oklch(0.72 0.18 50);
   --brand-purple: oklch(0.38 0.14 300);
+  --brand-orange: oklch(0.7 0.19 52);
+  --navy: oklch(0.32 0.08 255);
   --panel: oklch(0.08 0.01 260);
-  --gradient-hero: linear-gradient(180deg, oklch(0.42 0.1 50) 0%, oklch(0.25 0.08 300) 55%, oklch(0.13 0.015 260) 100%);
-  --gradient-button: linear-gradient(90deg, oklch(0.76 0.17 60), oklch(0.65 0.2 38));
+  --gradient-hero: linear-gradient(180deg, oklch(0.55 0.16 55) 0%, oklch(0.3 0.08 45) 55%, oklch(0.13 0.015 260) 100%);
+  --gradient-button: linear-gradient(90deg, oklch(0.75 0.18 60), oklch(0.62 0.21 40));
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
