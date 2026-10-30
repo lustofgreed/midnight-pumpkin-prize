@@ -25,13 +25,13 @@ const APPLY_URL = "https://example.com/apply";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AirTalk Wireless — Spooky Halloween Deal 🎃" },
+      { title: "Spooky — Halloween Deal 🎃" },
       {
         name: "description",
         content:
           "Boo! Ghost your phone bill and score a spooky deal. Free phone package and free monthly service through the federal Lifeline program.",
       },
-      { property: "og:title", content: "AirTalk Wireless — Spooky Halloween Deal 🎃" },
+      { property: "og:title", content: "Spooky — Halloween Deal 🎃" },
       {
         property: "og:description",
         content: "Claim your free phone package and free monthly service before this treat vanishes!",
@@ -65,9 +65,9 @@ const stateTabs = ["California", "Kentucky", "Tribal Residents", "Other States"]
 function Logo() {
   return (
     <a href="/" className="leading-none">
-      <span className="block text-2xl font-bold tracking-tight text-foreground">AirTalk</span>
+      <span className="block font-display text-3xl text-brand-orange">Spooky</span>
       <span className="block text-[10px] font-medium tracking-widest text-muted-foreground">
-        — by AIRVOICE WIRELESS
+        HALLOWEEN GIVEAWAY
       </span>
     </a>
   );
@@ -178,7 +178,7 @@ function PrivacyNote() {
   return (
     <p className="mt-4 text-xs text-muted-foreground">
       By continuing, you agree to our <span className="underline">Privacy Policy</span> and to receive emails
-      about the latest updates, offers and notifications from AirTalk Wireless. You can unsubscribe at any time.
+      about the latest updates, offers and notifications from Spooky. You can unsubscribe at any time.
     </p>
   );
 }
@@ -320,7 +320,7 @@ function Index() {
             <ApplyButton>Check My Eligibility</ApplyButton>
           </div>
           <p className="mt-8 text-xs text-muted-foreground">
-            Offer provided through the federal Lifeline program via AirTalk Wireless. Eligibility, service, and
+            Offer provided through the federal Lifeline program via Spooky. Eligibility, service, and
             device availability vary by state.
           </p>
         </div>
@@ -413,7 +413,7 @@ function Index() {
             <a href="https://pinterest.com" className="hover:text-brand-orange">Pinterest</a>
             <a href="mailto:hello@example.com" className="hover:text-brand-orange">Email</a>
           </nav>
-          <p className="text-sm text-foreground/70">© 2026 AirTalk Wireless</p>
+          <p className="text-sm text-foreground/70">© 2026 Spooky</p>
         </div>
       </footer>
     </div>
