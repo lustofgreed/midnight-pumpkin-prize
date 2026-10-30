@@ -192,36 +192,78 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-hero">
         <img
           src={heroBg}
           alt=""
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover opacity-80"
         />
-        <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-14 text-center">
-          <div className="flex items-center justify-center gap-3">
-            <img src={ghostImg} alt="Ghost mascot" width={816} height={816} className="w-16 md:w-20" />
-            <h1 className="font-display text-5xl leading-tight text-foreground drop-shadow md:text-7xl">
+        <img
+          src={pumpkinImg}
+          alt="Jack-o-lantern"
+          width={816}
+          height={816}
+          className="absolute bottom-0 left-2 w-20 md:left-10 md:w-32"
+        />
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center px-5 pb-12 pt-8 text-center">
+          <div className="flex items-center justify-center gap-2">
+            <img src={ghostImg} alt="Ghost mascot" width={816} height={816} className="w-10 md:w-12" />
+            <h1 className="font-display text-3xl leading-tight text-foreground drop-shadow md:text-4xl">
               Boo! Ghost your phone bill,
               <br />
               Score a spooky deal
             </h1>
           </div>
-          <img
-            src={phonePackageImg}
-            alt="Free phone package with two smartphones, SIM cards and charger"
-            width={1024}
-            height={1024}
-            className="mt-6 w-full max-w-lg"
-          />
-          <div className="mt-8 w-full max-w-2xl rounded-2xl border border-border bg-panel/90 p-6 backdrop-blur">
-            <h2 className="text-xl font-bold text-brand-orange">
+          <div className="relative mt-4 w-full max-w-md">
+            <img
+              src={phonePackageImg}
+              alt="Free phone package with two smartphones, SIM cards and charger"
+              width={1024}
+              height={1024}
+              className="mx-auto w-64 md:w-80"
+            />
+            <span className="absolute left-0 top-1/3 -rotate-3 rounded-md border-2 border-foreground bg-panel px-2 py-1 font-display text-sm text-foreground md:-left-16 md:text-lg">
+              FREE PHONE PACKAGE
+            </span>
+            <span className="absolute right-0 top-6 rotate-3 rounded-md border-2 border-foreground bg-panel px-2 py-1 font-display text-sm text-foreground md:-right-16 md:text-lg">
+              FREE MONTHLY SERVICE
+            </span>
+          </div>
+          <div className="mt-4 w-full rounded-xl border border-brand-orange/60 bg-panel/90 p-4 backdrop-blur">
+            <h2 className="text-sm font-bold text-brand-orange md:text-base">
               Enter your details and unlock your spooky-good deal.
             </h2>
-            <LeadForm buttonText="Unlock My Offer" />
-            <PrivacyNote />
+            <form
+              className="mt-3 grid gap-2 sm:grid-cols-3"
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.location.href = APPLY_URL;
+              }}
+            >
+              <input
+                required
+                placeholder="Enter Zip Code"
+                className="rounded-md border border-input bg-muted px-3 py-2 text-xs placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <input
+                required
+                type="email"
+                placeholder="email@address.com"
+                className="rounded-md border border-input bg-muted px-3 py-2 text-xs placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <button
+                type="submit"
+                className="rounded-md bg-brand-orange py-2 text-xs font-bold uppercase text-primary-foreground hover:opacity-90"
+              >
+                Unlock My Offer
+              </button>
+            </form>
+            <p className="mt-2 text-[10px] text-muted-foreground">
+              By continuing, you agree to our <span className="underline">Privacy Policy</span> and to receive
+              emails about the latest updates, offers and notifications from Spooky. You can unsubscribe at any time.
+            </p>
           </div>
         </div>
       </section>
